@@ -13,7 +13,7 @@ bin := main
 src := $(wildcard *.c *.cpp)
 obj := $(src:.c=.o)
 obj := $(obj:.cpp=.o)
-ld_flags := -luv
+ld_flags :=
 
 all: $(bin)
 
