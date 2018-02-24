@@ -14,6 +14,7 @@
 #include "log.h"
 
 int main(int argc, const char *argv[]) {
+    logfunc();
     return 0;
 }
 
