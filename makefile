@@ -9,11 +9,12 @@
 #######################################################################
 .PHONY: all clean
 
-bin := main
+bin := a.out
 src := $(wildcard *.c *.cpp)
 obj := $(src:.c=.o)
 obj := $(obj:.cpp=.o)
 ld_flags :=
+c_flags := -Werror -Wall
 
 all: $(bin)
 
@@ -23,10 +24,10 @@ $(bin): $(obj)
 	@echo "[gen] "$@
 %.o:%.c
 	@echo "[ cc] "$@
-	@gcc -c $< -o $@
+	@gcc $(c_flags) -c $< -o $@
 %.o:%.cpp
 	@echo "[cpp] "$@
-	@g++ -c $< -o $@
+	@g++ $(c_flags) -c $< -o $@
 
 clean:
 	@echo "cleaning..."

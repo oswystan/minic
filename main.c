@@ -12,9 +12,10 @@
 
 #define LOG_TAG "main"
 #include "log.h"
+#include "typedefs.h"
 
 int main(int argc, const char *argv[]) {
-    logfunc();
+    logd("hello");
     return 0;
 }
 
